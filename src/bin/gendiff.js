@@ -1,1 +1,3 @@
-console.log('Hi, it is my second project! Good luck!');
+#!/usr/bin/env node
+
+console.log(`Lets try again`);
