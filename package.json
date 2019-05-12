@@ -1,0 +1,35 @@
+{
+  "name": "gen-difference",
+  "version": "1.0.0",
+  "description": "my second project-gendiff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valyaevadaria/project-lvl2-s475.git"
+  },
+  "author": "valyaevadaria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valyaevadaria/project-lvl2-s475/issues",
+    "email": "valyaevadaria@gmail.com"
+  },
+  "homepage": "https://github.com/valyaevadaria/project-lvl2-s475#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4"
+  },
+  "dependencies": {},
+  "keywords": [
+    "my",
+    "second",
+    "project-gendiff"
+  ]
+}
