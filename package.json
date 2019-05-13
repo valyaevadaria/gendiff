@@ -1,6 +1,6 @@
 {
   "name": "new-gendiff",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "description": "my second project-gendiff",
   "bin": {
     "gendiff": "dist/bin/gendiff.js"
@@ -34,7 +34,9 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "commander": "^2.20.0"
+  },
   "keywords": [
     "my",
     "second",
