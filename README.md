@@ -6,11 +6,11 @@ Gendiff is a programm, which find differences in files.
 
    sudo make install -g new-gendiff
 
-# Run
+# Get description of commands
 
-    gendiff
+    gendiff -h
 
-//Example: https://asciinema.org/
+Example: https://asciinema.org/a/Gsf8BVFM7eCjxN0QARDPZWm5d
 
 
 # nodejs-package
