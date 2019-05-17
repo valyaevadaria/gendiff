@@ -12,6 +12,15 @@ Gendiff is a programm, which find differences in files.
 
 Example: https://asciinema.org/a/Gsf8BVFM7eCjxN0QARDPZWm5d
 
+# Comparise two json files 
+
+    gendiff before.json after.json
+
+Example: https://asciinema.org/a/1xnWPGpqdrSN5Kyr0fI0R1wvY
+
+  Test:
+
+    npm run watch
 
 # nodejs-package
 
