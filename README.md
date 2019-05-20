@@ -20,7 +20,13 @@ Example: https://asciinema.org/a/1xnWPGpqdrSN5Kyr0fI0R1wvY
 
   Test:
 
-    npm run watch
+    npm run 
+    
+# Comparise two yaml files
+
+    gendiff before.yml after.yml
+
+Exemple: https://asciinema.org/a/15QlbryMQ6ib1dWP1xHhzGgyz
 
 # nodejs-package
 

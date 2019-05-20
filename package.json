@@ -1,6 +1,6 @@
 {
   "name": "new-gendiff",
-  "version": "1.0.27",
+  "version": "1.0.30",
   "description": "my second project-gendiff",
   "bin": {
     "gendiff": "dist/bin/gendiff.js"
@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "commander": "^2.20.0",
+    "js-yaml": "^3.13.1",
     "lodash": "^4.17.11"
   },
   "keywords": [
