@@ -14,7 +14,7 @@ const cheking = [
   },
   {
     check: (key, firstObj, secondObj) => firstObj[key] === secondObj[key],
-    getMean: (key, firstObj) => `  ${key}: ${firstObj[key]}\n`,
+    getMean: (key, firstObj) => `    ${key}: ${firstObj[key]}\n`,
   },
   {
     check: (key, firstObj, secondObj) => firstObj[key] !== secondObj[key],
@@ -25,7 +25,7 @@ const cheking = [
 const getDiff = (key, obj1, obj2) => cheking.find(({ check }) => check(key, obj1, obj2));
 
 const getData = (file) => {
-  const readFile = fs.readFileSync(file);
+  const readFile = fs.readFileSync(file, 'utf-8');
   const format = path.extname(file);
 
   const funcOfParser = getParser(format);

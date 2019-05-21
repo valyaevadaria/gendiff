@@ -2,18 +2,16 @@
 import fs from 'fs';
 import genDiff from '../src';
 
-test('test json', () => {
-  const before = '__tests__/__fixtures__/before.json';
-  const after = '__tests__/__fixtures__/after.json';
-  const result = fs.readFileSync('__tests__/__fixtures__/result-json.txt', 'utf8');
+const testList = [
+  ['before.json', 'after.json'],
+  ['before.yml', 'after.yml'],
+  ['before.ini', 'after.ini'],
+];
 
-  expect(genDiff(before, after)).toEqual(result);
-});
-
-test('test yaml', () => {
-  const before = '__tests__/__fixtures__/before.yml';
-  const after = '__tests__/__fixtures__/after.yml';
-  const result = fs.readFileSync('__tests__/__fixtures__/result-yaml.txt', 'utf8');
+test.each(testList)('gendiff %s %s', (bef, af) => {
+  const before = `__tests__/__fixtures__/${bef}`;
+  const after = `__tests__/__fixtures__/${af}`;
+  const result = fs.readFileSync('__tests__/__fixtures__/result.txt', 'utf8');
 
   expect(genDiff(before, after)).toEqual(result);
 });

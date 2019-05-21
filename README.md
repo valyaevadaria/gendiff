@@ -28,6 +28,12 @@ Example: https://asciinema.org/a/1xnWPGpqdrSN5Kyr0fI0R1wvY
 
 Exemple: https://asciinema.org/a/15QlbryMQ6ib1dWP1xHhzGgyz
 
+# Comparise two ini files
+
+    gendiff before.ini after.ini
+
+Exemple:     https://asciinema.org/a/1yB7OUkDdBqBWoaDFs0PEZ4Hj
+
 # nodejs-package
 
 <a href="https://codeclimate.com/github/valyaevadaria/project-lvl2-s475/maintainability"><img src="https://api.codeclimate.com/v1/badges/c8c0e4a2befbe055db77/maintainability" /></a>
