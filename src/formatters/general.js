@@ -11,7 +11,7 @@ const stringify = (value, level) => {
   return `{\n${str}\n${tab(level)}}`;
 };
 
-const getRender = (ast) => {
+const getGeneral = (ast) => {
   const iter = (tree, level) => {
     const text = tree.map((object) => {
       const value = stringify(object.value, level + 1);
@@ -36,4 +36,4 @@ const getRender = (ast) => {
   return `{\n${_.flatten(iter(ast, 1)).join('\n')}\n}`;
 };
 
-export default getRender;
+export default getGeneral;

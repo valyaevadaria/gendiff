@@ -3,7 +3,7 @@ import _ from 'lodash';
 import path from 'path';
 import getParser from './parsers';
 import getAST from './ast';
-import getRender from './render';
+import getFormat from './formatters';
 
 const getData = (file) => {
   const readFile = fs.readFileSync(file, 'utf-8');
@@ -15,12 +15,13 @@ const getData = (file) => {
   return getObject;
 };
 
-const genDiff = (file1, file2) => {
+const genDiff = (format, file1, file2) => {
   const obj1 = getData(file1);
   const obj2 = getData(file2);
 
   const ast = getAST(obj1, obj2);
-  return getRender(ast);
+  const toFormat = getFormat(format);
+  return toFormat(ast);
 };
 
 export default genDiff;
