@@ -10,7 +10,7 @@ const testList = [
   ['json', 'before.ini', 'after.ini', 'result-json.txt'],
   ['general', '__trees__/before.json', '__trees__/after.json', '__trees__/result.txt'],
   ['general', '__trees__/before.yml', '__trees__/after.yml', '__trees__/result.txt'],
-  ['general', '__trees__/before.ini', '__trees__/after.ini', '__trees__/result.txt'],
+  ['general', '__trees__/before.ini', '__trees__/after.ini', '__trees__/resu.txt'],
   ['plain', '__trees__/before.json', '__trees__/after.json', '__trees__/result-plain.txt'],
   ['json', '__trees__/before.ini', '__trees__/after.ini', '__trees__/result-json.txt'],
 ];
