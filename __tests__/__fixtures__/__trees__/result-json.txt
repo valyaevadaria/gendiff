@@ -1,0 +1,98 @@
+[
+  {
+    "type": "child",
+    "key": "common",
+    "child": [
+      {
+        "type": "general",
+        "key": "setting1",
+        "value": "Value 1"
+      },
+      {
+        "type": "delete",
+        "key": "setting2",
+        "value": "200"
+      },
+      {
+        "type": "change",
+        "key": "setting3",
+        "oldValue": true,
+        "newValue": {
+          "key": "value"
+        }
+      },
+      {
+        "type": "child",
+        "key": "setting6",
+        "child": [
+          {
+            "type": "general",
+            "key": "key",
+            "value": "value"
+          },
+          {
+            "type": "new",
+            "key": "ops",
+            "value": "vops"
+          }
+        ]
+      },
+      {
+        "type": "new",
+        "key": "follow",
+        "value": false
+      },
+      {
+        "type": "new",
+        "key": "setting4",
+        "value": "blah blah"
+      },
+      {
+        "type": "new",
+        "key": "setting5",
+        "value": {
+          "key5": "value5"
+        }
+      }
+    ]
+  },
+  {
+    "type": "child",
+    "key": "group1",
+    "child": [
+      {
+        "type": "change",
+        "key": "baz",
+        "oldValue": "bas",
+        "newValue": "bars"
+      },
+      {
+        "type": "general",
+        "key": "foo",
+        "value": "bar"
+      },
+      {
+        "type": "change",
+        "key": "nest",
+        "oldValue": {
+          "key": "value"
+        },
+        "newValue": "str"
+      }
+    ]
+  },
+  {
+    "type": "delete",
+    "key": "group2",
+    "value": {
+      "abc": "12345"
+    }
+  },
+  {
+    "type": "new",
+    "key": "group3",
+    "value": {
+      "fee": "100500"
+    }
+  }
+]

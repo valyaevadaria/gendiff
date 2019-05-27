@@ -45,6 +45,11 @@ The default format is general.
 
 Example:     https://asciinema.org/a/hINEyKa5TtpQUdJDtEr0iJxDC
 
+# Comparise two files and get the result in json format.
+
+    gendiff --format plain before.json after.json
+
+Example:    https://asciinema.org/a/0MTpO6upOPd7IGRcHhckiYriY
 
 # nodejs-package
 

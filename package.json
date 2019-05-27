@@ -1,6 +1,6 @@
 {
   "name": "new-gendiff",
-  "version": "1.1.16",
+  "version": "1.1.21",
   "description": "my second project-gendiff",
   "bin": {
     "gendiff": "dist/bin/gendiff.js"
