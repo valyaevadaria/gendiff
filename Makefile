@@ -11,7 +11,7 @@ link:
 	npm link
 
 lint:
-	npx eslint
+	npx eslint  .
 
 test:
 	npm test
