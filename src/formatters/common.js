@@ -16,18 +16,18 @@ const getGeneral = (ast) => {
     const text = tree.map((object) => {
       const value = stringify(object.value, level + 1);
       switch (object.type) {
-        case 'child':
-          return `${tab(level)}  ${object.key}: {\n${_.flatten(iter(object.child, level + 2)).join('\n')}\n${tab(level + 1)}}`;
-        case 'new':
+        case 'children':
+          return `${tab(level)}  ${object.key}: {\n${_.flatten(iter(object.children, level + 2)).join('\n')}\n${tab(level + 1)}}`;
+        case 'added':
           return `${tab(level)}+ ${object.key}: ${value}`;
-        case 'delete':
+        case 'deleted':
           return `${tab(level)}- ${object.key}: ${value}`;
-        case 'general':
+        case 'common':
           return `${tab(level)}  ${object.key}: ${value}`;
-        case 'change':
+        case 'changed':
           return [`${tab(level)}- ${object.key}: ${stringify(object.oldValue, level + 1)}`, `${tab(level)}+ ${object.key}: ${stringify(object.newValue, level + 1)}`];
         default:
-          break;
+          throw new Error(`Type ${object.type} is incorrect!`);
       }
     });
     return text;

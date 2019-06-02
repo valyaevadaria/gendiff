@@ -1,27 +1,27 @@
 [
   {
-    "type": "general",
+    "type": "common",
     "key": "host",
     "value": "hexlet.io"
   },
   {
-    "type": "change",
+    "type": "changed",
     "key": "timeout",
     "oldValue": "50",
     "newValue": "20"
   },
   {
-    "type": "delete",
+    "type": "deleted",
     "key": "proxy",
     "value": "123.234.53.22"
   },
   {
-    "type": "delete",
+    "type": "deleted",
     "key": "follow",
     "value": false
   },
   {
-    "type": "new",
+    "type": "added",
     "key": "verbose",
     "value": true
   }

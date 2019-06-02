@@ -1,10 +1,10 @@
-import general from './general';
+import common from './common';
 import plain from './plain';
 import json from './json';
 
-export default (format = 'general') => {
+export default (format = 'common') => {
   const formats = {
-    general,
+    common,
     plain,
     json,
   };
