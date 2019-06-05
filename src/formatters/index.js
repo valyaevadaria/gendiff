@@ -1,12 +1,11 @@
-import common from './common';
+import standart from './standartFormat';
 import plain from './plain';
 import json from './json';
 
-export default (format = 'common') => {
-  const formats = {
-    common,
-    plain,
-    json,
-  };
-  return formats[format];
+const formats = {
+  standart,
+  plain,
+  json,
 };
+
+export default (format = 'standart') => formats[format];

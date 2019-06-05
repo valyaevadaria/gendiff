@@ -6,18 +6,18 @@ const stringify = (value, level) => {
   if (!(value instanceof Object)) {
     return value;
   }
-  const str = [...Object.keys(value)]
+  const str = Object.keys(value)
     .map(key => `${tab(level + 1)}  ${key}: ${value[key]}`);
   return `{\n${str}\n${tab(level)}}`;
 };
 
-const getGeneral = (ast) => {
+const getStandartFormat = (ast) => {
   const iter = (tree, level) => {
     const text = tree.map((object) => {
       const value = stringify(object.value, level + 1);
       switch (object.type) {
         case 'children':
-          return `${tab(level)}  ${object.key}: {\n${_.flatten(iter(object.children, level + 2)).join('\n')}\n${tab(level + 1)}}`;
+          return `${tab(level)}  ${object.key}: {\n${iter(object.children, level + 2).join('\n')}\n${tab(level + 1)}}`;
         case 'added':
           return `${tab(level)}+ ${object.key}: ${value}`;
         case 'deleted':
@@ -25,7 +25,7 @@ const getGeneral = (ast) => {
         case 'common':
           return `${tab(level)}  ${object.key}: ${value}`;
         case 'changed':
-          return [`${tab(level)}- ${object.key}: ${stringify(object.oldValue, level + 1)}`, `${tab(level)}+ ${object.key}: ${stringify(object.newValue, level + 1)}`];
+          return `${tab(level)}- ${object.key}: ${stringify(object.oldValue, level + 1)}\n${tab(level)}+ ${object.key}: ${stringify(object.newValue, level + 1)}`;
         default:
           throw new Error(`Type ${object.type} is incorrect!`);
       }
@@ -33,7 +33,7 @@ const getGeneral = (ast) => {
     return text;
   };
 
-  return `{\n${_.flatten(iter(ast, 1)).join('\n')}\n}`;
+  return `{\n${_.flattenDeep(iter(ast, 1)).join('\n')}\n}`;
 };
 
-export default getGeneral;
+export default getStandartFormat;

@@ -4,12 +4,12 @@ import getParser from './parsers';
 import getAST from './ast';
 import getFormat from './formatters';
 
-const getData = (file) => {
-  const readFile = fs.readFileSync(file, 'utf-8');
-  const format = path.extname(file);
+const getData = (pathToFile) => {
+  const readFile = fs.readFileSync(pathToFile, 'utf-8');
+  const format = path.extname(pathToFile);
 
-  const parser = getParser(format);
-  const getObject = parser(readFile);
+  const toParse = getParser(format);
+  const getObject = toParse(readFile);
 
   return getObject;
 };
