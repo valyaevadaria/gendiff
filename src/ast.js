@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 const cheking = [
   {
-    check: (key, firstObj, secondObj) => (firstObj[key] instanceof Object) && (secondObj[key] instanceof Object),
+    check: (key, firstObj, secondObj) => _.isObject(firstObj[key]) && _.isObject(secondObj[key]),
     getMean: (key, firstObj, secondObj, fn) => ({ type: 'children', key, children: fn(firstObj[key], secondObj[key]) }),
   },
   {
