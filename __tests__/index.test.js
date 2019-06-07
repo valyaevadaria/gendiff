@@ -2,14 +2,14 @@ import fs from 'fs';
 import genDiff from '../src';
 
 const testList = [
-  ['standart', 'before.json', 'after.json', 'result.txt'],
-  ['standart', 'before.yml', 'after.yml', 'result.txt'],
-  ['standart', 'before.ini', 'after.ini', 'result.txt'],
+  ['defaultRenderer', 'before.json', 'after.json', 'result.txt'],
+  ['defaultRenderer', 'before.yml', 'after.yml', 'result.txt'],
+  ['defaultRenderer', 'before.ini', 'after.ini', 'result.txt'],
   ['plain', 'before.json', 'after.json', 'result-plain.txt'],
   ['json', 'before.ini', 'after.ini', 'result-json.txt'],
-  ['standart', '__trees__/before.json', '__trees__/after.json', '__trees__/result.txt'],
-  ['standart', '__trees__/before.yml', '__trees__/after.yml', '__trees__/result.txt'],
-  ['standart', '__trees__/before.ini', '__trees__/after.ini', '__trees__/result.txt'],
+  ['defaultRenderer', '__trees__/before.json', '__trees__/after.json', '__trees__/result.txt'],
+  ['defaultRenderer', '__trees__/before.yml', '__trees__/after.yml', '__trees__/result.txt'],
+  ['defaultRenderer', '__trees__/before.ini', '__trees__/after.ini', '__trees__/result.txt'],
   ['plain', '__trees__/before.json', '__trees__/after.json', '__trees__/result-plain.txt'],
   ['json', '__trees__/before.ini', '__trees__/after.ini', '__trees__/result-json.txt'],
 ];

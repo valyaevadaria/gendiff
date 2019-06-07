@@ -5,11 +5,11 @@ import getAST from './ast';
 import getFormat from './formatters';
 
 const getData = (pathToFile) => {
-  const readFile = fs.readFileSync(pathToFile, 'utf-8');
+  const data = fs.readFileSync(pathToFile, 'utf-8');
   const format = path.extname(pathToFile);
 
-  const toParse = getParser(format);
-  const getObject = toParse(readFile);
+  const parse = getParser(format);
+  const getObject = parse(data);
 
   return getObject;
 };

@@ -11,7 +11,7 @@ const stringify = (value, level) => {
   return `{\n${str}\n${tab(level)}}`;
 };
 
-const getStandartFormat = (ast) => {
+const getDefaultRenderer = (ast) => {
   const iter = (tree, level) => {
     const text = tree.map((object) => {
       const value = stringify(object.value, level + 1);
@@ -36,4 +36,4 @@ const getStandartFormat = (ast) => {
   return `{\n${_.flattenDeep(iter(ast, 1)).join('\n')}\n}`;
 };
 
-export default getStandartFormat;
+export default getDefaultRenderer;
