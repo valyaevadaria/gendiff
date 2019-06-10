@@ -1,11 +1,11 @@
-import defaultRenderer from './default-renderer';
-import plain from './plain-renderer';
-import json from './json-renderer';
+import renderer from './renderer';
+import plain from './plain';
+import json from './json';
 
 const formats = {
-  defaultRenderer,
+  renderer,
   plain,
   json,
 };
 
-export default (format = 'defaultRenderer') => formats[format];
+export default (format = 'renderer') => formats[format];
