@@ -1,11 +1,11 @@
-import renderer from './renderer';
+import stylish from './stylish';
 import plain from './plain';
 import json from './json';
 
 const formats = {
-  renderer,
+  stylish,
   plain,
   json,
 };
 
-export default (format = 'renderer') => formats[format];
+export default (format = 'stylish') => formats[format];
